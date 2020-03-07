@@ -25,7 +25,7 @@ export const fontScale = (size) => {
   if (window.innerWidth > window.innerHeight) {
     return size;
   }
-  return size*window.devicePixelRatio;
+  return size*window.devicePixelRatio/2;
 }
 
 const initialState = {
