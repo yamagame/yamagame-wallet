@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+html {
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  height: 100%;
+}
+
+.App-logo {
+  -webkit-animation: App-logo-spin infinite 20s linear;
+          animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@-webkit-keyframes App-logo-spin {
+  from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes App-logo-spin {
+  from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+.App-Row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+.App-Column {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.Button-Container {
+  padding: 0;
+  border: 0;
+  -ms-flex: 1 1;
+      flex: 1 1;
+}
+
+.Button-Key {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  border: 1px solid lightgray;
+}
+
+.MenuButton-Container {
+  padding: 0;
+  border: 0;
+  height: 44px;
+}
+
+.MenuButton-Key {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  border: 1px solid lightgray;
+}
+
+.Item-Container {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid lightgray;
+}
+
+.Category {
+  width: 90%;
+  margin: auto;
+}
+
+.Category-Name {
+  width: 90%;
+  margin: auto;
+  word-wrap: normal;
+}
+
+/*# sourceMappingURL=main.f59ca81e.css.map*/

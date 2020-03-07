@@ -1,2 +1,3 @@
-# yamagame-wallet
-簿記アプリのサンプルです。
+# Wallet App
+
+記帳アプリのサンプルです。

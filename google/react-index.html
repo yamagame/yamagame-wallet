@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-title" content="おさいふメモ">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#000000">
+<title>React App</title>
+<script>
+window.walletFunctions = {}
+window.walletFunctions.addDealData = function(deal, callback) {
+  google.script.run.withSuccessHandler(callback)
+  .addDealData(deal)
+}
+window.walletFunctions.loadCategoryData = function(category, callback) {
+  google.script.run.withSuccessHandler(callback)
+  .getAccountItems(category)
+}
+window.walletFunctions.loadAccountData = function(filter, callback) {
+  google.script.run.withSuccessHandler(callback)
+  .getMonthlyItems(filter)
+}
+</script>
+<?!= include('react-main.css'); ?>
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"></div>
+<?!= include('react-main.js'); ?>
+</body>
+</html>
