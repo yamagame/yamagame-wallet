@@ -21,15 +21,16 @@ function parseCSV(csv)
   const r = [];
   csv.split('\n').forEach( l => {
     const w = l.split(',');
-    r.push({
-      date: removeQuot(w[0]),
-      debit: removeQuot(w[1]),
-      credit: removeQuot(w[2]),
-      value: removeQuot(w[3]),
-      comment: removeQuot(w[4]),
-    })
+    if (w.length >= 5) {
+      r.push({
+        date: removeQuot(w[0]),
+        debit: removeQuot(w[1]),
+        credit: removeQuot(w[2]),
+        value: removeQuot(w[3]),
+        comment: removeQuot(w[4]),
+      })
+    }
   })
-  console.log(r);
   return r;
 }
 
