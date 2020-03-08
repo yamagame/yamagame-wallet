@@ -4,6 +4,7 @@ import {
   loadCategoryData,
   addDealData,
   loadAccountData, 
+  saveAccountData, 
 } from './localstore'
 
 const AsyncStorage = {
@@ -123,8 +124,12 @@ export const loadAccount = (filter, callback) => async (dispatch, getState) => {
       type: types.PARAMS,
       payload,
     });
-    if (callback) callback();
+    if (callback) callback(data);
   });
+}
+
+export const saveAccount = (jsonData, callback) => async (dispatch, getState) => {
+  await saveAccountData(jsonData, callback);
 }
 
 export const addDeal = (deal, callback) => async (dispatch, getState) => {

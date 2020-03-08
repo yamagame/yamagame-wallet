@@ -36,18 +36,27 @@ export const addDealData = async (deal, callback) => {
 }
 
 export const loadAccountData = async (filter, callback) => {
-  const d = new Date(`${filter.year}/${filter.month}/1`);
-  const f = `${d.getFullYear()}/${d.getMonth()+1}`;
-  callback((await AsyncStorage.getItem("walletAccountData", []))
-  .filter( v => {
-    return (v.date.indexOf(f) >= 0);
-  })
-  .map( v => {
-    if (!v.day) {
-      v.day = (new Date(v.date)).getDate()
-    }
-    return v;
-  }));
+  if (!filter) {
+    callback(await AsyncStorage.getItem("walletAccountData", []))
+  } else {
+    const d = new Date(`${filter.year}/${filter.month}/1`);
+    const f = `${d.getFullYear()}/${d.getMonth()+1}`;
+    callback((await AsyncStorage.getItem("walletAccountData", []))
+    .filter( v => {
+      return (v.date.indexOf(f) >= 0);
+    })
+    .map( v => {
+      if (!v.day) {
+        v.day = (new Date(v.date)).getDate()
+      }
+      return v;
+    }));
+  }
+}
+
+export const saveAccountData = async (jsonData, callback) => {
+  await AsyncStorage.setItem("walletAccountData", jsonData);
+  callback();
 }
 
 export const loadCategoryData = (category, callback) => {

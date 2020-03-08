@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/yamagame-wallet/static/css/main.a794f530.chunk.css",
-    "main.js": "/yamagame-wallet/static/js/main.9c7c9898.chunk.js",
-    "main.js.map": "/yamagame-wallet/static/js/main.9c7c9898.chunk.js.map",
+    "main.js": "/yamagame-wallet/static/js/main.03cdc22a.chunk.js",
+    "main.js.map": "/yamagame-wallet/static/js/main.03cdc22a.chunk.js.map",
     "runtime-main.js": "/yamagame-wallet/static/js/runtime-main.69fc1f73.js",
     "runtime-main.js.map": "/yamagame-wallet/static/js/runtime-main.69fc1f73.js.map",
     "static/js/2.4368ac31.chunk.js": "/yamagame-wallet/static/js/2.4368ac31.chunk.js",
     "static/js/2.4368ac31.chunk.js.map": "/yamagame-wallet/static/js/2.4368ac31.chunk.js.map",
     "index.html": "/yamagame-wallet/index.html",
-    "precache-manifest.47ce49f83088d5a03265ac745bbbb054.js": "/yamagame-wallet/precache-manifest.47ce49f83088d5a03265ac745bbbb054.js",
+    "precache-manifest.12e6b65f842885a0dc12d50fc30c8a76.js": "/yamagame-wallet/precache-manifest.12e6b65f842885a0dc12d50fc30c8a76.js",
     "service-worker.js": "/yamagame-wallet/service-worker.js",
     "static/css/main.a794f530.chunk.css.map": "/yamagame-wallet/static/css/main.a794f530.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.69fc1f73.js",
     "static/js/2.4368ac31.chunk.js",
     "static/css/main.a794f530.chunk.css",
-    "static/js/main.9c7c9898.chunk.js"
+    "static/js/main.03cdc22a.chunk.js"
   ]
 }

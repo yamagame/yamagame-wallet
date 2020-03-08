@@ -85,7 +85,7 @@ class ListAccount extends Component {
         {/*<p>{ window.innerWidth } { window.innerHeight } { window.devicePixelRatio }</p>*/}
         <div className="Item-Container">
           <Row>
-            <span style={ { flex: 1, fontSize: `${fontScale(22)}px`, margin: 'auto', } }>{ this.props.title }</span>
+            <span style={ { flex: 1, fontSize: `${fontScale(22)}px`, margin: 'auto', } } onClick={this.props.goEditor}>{ this.props.title }</span>
             <MenuButton type="button" value="もどる" onClick={this.props.goBack} style={ { width: '40%', height: '100%', } }/>
           </Row>
           <Row>

@@ -4,6 +4,7 @@ import {
   AddAccount,
   SelectItem,
   ListAccount,
+  JsonEditor,
 } from './containers';
 import {
   changeLayout,
@@ -96,6 +97,12 @@ class App extends Component {
     });
   }
 
+  gotoJsonEditor = () => {
+    this.setState({
+      state: 'json-editor',
+    });
+  }
+
   addDeal = (callback) => {
     this.props.startLoading(() => {
       this.props.addDeal({
@@ -174,6 +181,14 @@ class App extends Component {
         <ListAccount
           title="取引"
           goBack={this.cancelSelectItem}
+          goEditor={this.gotoJsonEditor}
+        />
+      );
+    }
+    if (this.state.state === 'json-editor') {
+      return (
+        <JsonEditor
+          goBack={this.gotoList}
         />
       );
     }
