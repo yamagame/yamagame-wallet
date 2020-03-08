@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4414e81c0ece0535a95b5d5dd304dec8",
+    "revision": "b1cdddf2d70de5dd4aae2daef4507afa",
     "url": "/yamagame-wallet/index.html"
   },
   {
-    "revision": "3cc7d1445a75c9cfb727",
+    "revision": "d0aa9efbe3889934867e",
     "url": "/yamagame-wallet/static/css/main.a794f530.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yamagame-wallet/static/js/2.4368ac31.chunk.js"
   },
   {
-    "revision": "3cc7d1445a75c9cfb727",
-    "url": "/yamagame-wallet/static/js/main.4a301e62.chunk.js"
+    "revision": "d0aa9efbe3889934867e",
+    "url": "/yamagame-wallet/static/js/main.7812556a.chunk.js"
   },
   {
     "revision": "f089d91c85e3f818da8d",

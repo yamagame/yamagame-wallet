@@ -117,6 +117,7 @@ export const loadCategory = (category, callback) => async (dispatch, getState) =
 
 export const loadAccount = (filter, callback) => async (dispatch, getState) => {
   loadAccountData(filter, (data) => {
+    console.log(data);
     const payload = {
       account: data,
     }
