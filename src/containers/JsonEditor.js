@@ -17,7 +17,10 @@ class JsonEditor extends Component {
   
   componentDidMount() {
     this.props.loadAccount(null, (data) => {
-      console.log(data);
+      data.map( v => {
+        delete v.day;
+        delete v.timestamp;
+      })
       this.setState({
         jsonData: JSON.stringify(data, null, '  '),
       })

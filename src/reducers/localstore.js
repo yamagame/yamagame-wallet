@@ -46,10 +46,16 @@ export const loadAccountData = async (filter, callback) => {
       return (v.date.indexOf(f) >= 0);
     })
     .map( v => {
+      const d = new Date(v.date);
       if (!v.day) {
-        v.day = (new Date(v.date)).getDate()
+        v.day = d.getDate()
       }
+      v.timestamp = d.getTime();
       return v;
+    })
+    .sort( (a,b) => {
+      if (a.timestamp > b.timestamp) return -1;
+      return 1;
     }));
   }
 }
