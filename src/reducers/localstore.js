@@ -37,7 +37,19 @@ export const addDealData = async (deal, callback) => {
 
 export const loadAccountData = async (filter, callback) => {
   if (!filter) {
-    callback(await AsyncStorage.getItem("walletAccountData", []))
+    callback((await AsyncStorage.getItem("walletAccountData", []))
+    .map( v => {
+      const d = new Date(v.date);
+      if (!v.day) {
+        v.day = d.getDate()
+      }
+      v.timestamp = d.getTime();
+      return v;
+    })
+    .sort( (a,b) => {
+      if (a.timestamp > b.timestamp) return -1;
+      return 1;
+    }))
   } else {
     const d = new Date(`${filter.year}/${filter.month}/1`);
     const f = `${d.getFullYear()}/${d.getMonth()+1}`;
