@@ -13,7 +13,7 @@ import {
 function Item({ title, onClick }) {
   return (
     <div className="Item-Container" onClick={ onClick }>
-      <p style={ { margin: 8, padding: 8, height: fontScale(28), fontSize: `${fontScale(24)}px` } }> { title } </p>
+      <p style={ { margin: 8, padding: 8, height: fontScale(22), fontSize: `${fontScale(22)}px` } }> { title } </p>
     </div>
   )
 }
@@ -64,8 +64,8 @@ class SelectItem extends Component {
       <div className="App">
         <div className="Item-Container">
           <Row>
-            <span style={ { flex: 1, fontSize: `${fontScale(24)}px`, margin: 'auto', } }>{ this.props.title }</span>
-            <MenuButton type="button" value="キャンセル" onClick={this.props.goBack} style={ { width: '40%', height: '100%', } }/>
+            <span style={ { flex: 1, fontSize: `${fontScale(22)}px`, margin: 'auto', } }>{ this.props.title }</span>
+            <MenuButton type="button" value="キャンセル" onClick={this.props.goBack} style={ { width: '60%', height: '100%', } }/>
           </Row>
         </div>
         <div style={ { height: '100%', overflow: 'auto', } }>

@@ -25,6 +25,7 @@ export const addDealData = async (deal, callback) => {
   console.log(deal);
   data.push({
     date: date.getFullYear()+"/"+(date.getMonth()+1)+"/"+date.getDate(),
+    day: date.getDate(),
     debit: CategoryName(deal.debit.category)+':'+deal.debit.name,
     credit: CategoryName(deal.credit.category)+':'+deal.credit.name,
     value: deal.value,
@@ -35,7 +36,18 @@ export const addDealData = async (deal, callback) => {
 }
 
 export const loadAccountData = async (filter, callback) => {
-  callback(await AsyncStorage.getItem("walletAccountData", []));
+  const d = new Date(`${filter.year}/${filter.month}`);
+  const f = `${d.getFullYear()}/${d.getMonth()+1}`;
+  callback((await AsyncStorage.getItem("walletAccountData", []))
+  .filter( v => {
+    return (v.date.indexOf(f) >= 0);
+  })
+  .map( v => {
+    if (!v.day) {
+      v.day = (new Date(v.date)).getDate()
+    }
+    return v;
+  }));
 }
 
 export const loadCategoryData = (category, callback) => {

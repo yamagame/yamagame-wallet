@@ -26,11 +26,11 @@ function Item({ value, onClick }) {
     <div className="Item-Container" onClick={ onClick }>
       <Row>
         <div style={{ height: '100%', backgroundColor: `${color}`, borderRight: 'lightgray solid 1px' }} >
-        <p style={ { margin: 8, padding: 8, height: fontScale(18), fontSize: `${fontScale(12)}px`, flex: 1, } }> { value.day } </p>
+        <p style={ { margin: 8, padding: 8, height: fontScale(16), fontSize: `${fontScale(12)}px`, flex: 1, } }> { value.day } </p>
         </div>
-        <p style={ { margin: 8, padding: 8, height: fontScale(18), fontSize: `${fontScale(12)}px`, flex: 5, overflow: 'hidden', } }> { value.debit } </p>
-        <p style={ { margin: 8, padding: 8, height: fontScale(18), fontSize: `${fontScale(12)}px`, flex: 3, textAlign: 'right', } }> { value.value } </p>
-        <p style={ { margin: 8, padding: 8, height: fontScale(18), fontSize: `${fontScale(12)}px`, flex: 5, overflow: 'hidden', } }> { value.credit } </p>
+        <p style={ { margin: 8, padding: 8, height: fontScale(16), fontSize: `${fontScale(12)}px`, flex: 5, overflow: 'hidden', } }> { value.debit } </p>
+        <p style={ { margin: 8, padding: 8, height: fontScale(16), fontSize: `${fontScale(12)}px`, flex: 3, textAlign: 'right', } }> { value.value } </p>
+        <p style={ { margin: 8, padding: 8, height: fontScale(16), fontSize: `${fontScale(12)}px`, flex: 5, overflow: 'hidden', } }> { value.credit } </p>
       </Row>
     </div>
   )
@@ -85,7 +85,7 @@ class ListAccount extends Component {
         {/*<p>{ window.innerWidth } { window.innerHeight } { window.devicePixelRatio }</p>*/}
         <div className="Item-Container">
           <Row>
-            <span style={ { flex: 1, fontSize: `${fontScale(24)}px`, margin: 'auto', } }>{ this.props.title }</span>
+            <span style={ { flex: 1, fontSize: `${fontScale(22)}px`, margin: 'auto', } }>{ this.props.title }</span>
             <MenuButton type="button" value="もどる" onClick={this.props.goBack} style={ { width: '40%', height: '100%', } }/>
           </Row>
           <Row>

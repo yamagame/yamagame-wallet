@@ -35,7 +35,7 @@ class MenuButton extends Component {
           value={this.state.value}
           onClick={this.props.onClick}
           onChange={this.handleChange}
-          style={ {fontSize: `${fontScale(24)}px` }}
+          style={ {fontSize: `${fontScale(22)}px` }}
         />
       </div>
     )
