@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/yamagame-wallet/precache-manifest.12e6b65f842885a0dc12d50fc30c8a76.js"
+  "/yamagame-wallet/precache-manifest.996d3dfe62ee7f7b85c3f761403a73ef.js"
 );
 
 self.addEventListener('message', (event) => {

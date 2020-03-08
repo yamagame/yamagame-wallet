@@ -9,7 +9,7 @@ import {
 } from './reducers'
 import './index.css';
 import App from './App';
-//import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker';
 
 let store = createStore(accountApp, applyMiddleware(thunk))
 
@@ -21,4 +21,4 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-//registerServiceWorker();
+registerServiceWorker();
