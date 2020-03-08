@@ -28,9 +28,9 @@ function Item({ value, onClick }) {
         <div style={{ height: '100%', backgroundColor: `${color}`, borderRight: 'lightgray solid 1px' }} >
         <p style={ { margin: 8, padding: 8, height: fontScale(16), fontSize: `${fontScale(12)}px`, flex: 1, } }> { value.day } </p>
         </div>
-        <p style={ { margin: 8, padding: 8, height: fontScale(16), fontSize: `${fontScale(12)}px`, flex: 4, overflow: 'hidden', } }> { value.debit } </p>
-        <p style={ { margin: 8, padding: 8, height: fontScale(16), fontSize: `${fontScale(12)}px`, flex: 3, textAlign: 'right', } }> { value.value } </p>
-        <p style={ { margin: 8, padding: 8, height: fontScale(16), fontSize: `${fontScale(12)}px`, flex: 4, overflow: 'hidden', } }> { value.credit } </p>
+        <p style={ { textAlign: 'center', margin: 8, padding: 8, height: fontScale(16), fontSize: `${fontScale(12)}px`, flex: 5, overflow: 'hidden', } }> { value.debit } </p>
+        <p style={ { textAlign: 'center', margin: 8, padding: 8, height: fontScale(16), fontSize: `${fontScale(12)}px`, flex: 1, textAlign: 'right', } }> { value.value } </p>
+        <p style={ { textAlign: 'center', margin: 8, padding: 8, height: fontScale(16), fontSize: `${fontScale(12)}px`, flex: 5, overflow: 'hidden', } }> { value.credit } </p>
       </Row>
     </div>
   )
