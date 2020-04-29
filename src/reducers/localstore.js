@@ -1,4 +1,4 @@
-const AsyncStorage = {
+export const asyncStorage = {
   getItem: function(key, defaultValue) {
     const value = localStorage.getItem(key);
     return (value !== null) ? JSON.parse(value).data : defaultValue;
@@ -20,7 +20,7 @@ export const CategoryName = (category) => {
 }
 
 export const addDealData = async (deal, callback) => {
-  const data = await AsyncStorage.getItem("walletAccountData", [])
+  const data = await asyncStorage.getItem("walletAccountData", [])
   const date = new Date();
   console.log(deal);
   data.push({
@@ -31,13 +31,13 @@ export const addDealData = async (deal, callback) => {
     value: deal.value,
     comment: deal.comment,
   })
-  await AsyncStorage.setItem("walletAccountData", data);
+  await asyncStorage.setItem("walletAccountData", data);
   callback();
 }
 
 export const loadAccountData = async (filter, callback) => {
   if (!filter) {
-    callback((await AsyncStorage.getItem("walletAccountData", []))
+    callback((await asyncStorage.getItem("walletAccountData", []))
     .map( v => {
       const d = new Date(v.date);
       if (!v.day) {
@@ -53,7 +53,7 @@ export const loadAccountData = async (filter, callback) => {
   } else {
     const d = new Date(`${filter.year}/${filter.month}/1`);
     const f = `${d.getFullYear()}/${d.getMonth()+1}`;
-    callback((await AsyncStorage.getItem("walletAccountData", []))
+    callback((await asyncStorage.getItem("walletAccountData", []))
     .filter( v => {
       return (v.date.indexOf(f) >= 0);
     })
@@ -73,7 +73,7 @@ export const loadAccountData = async (filter, callback) => {
 }
 
 export const saveAccountData = async (jsonData, callback) => {
-  await AsyncStorage.setItem("walletAccountData", jsonData);
+  await asyncStorage.setItem("walletAccountData", jsonData);
   callback();
 }
 

@@ -5,17 +5,8 @@ import {
   addDealData,
   loadAccountData, 
   saveAccountData, 
+  asyncStorage,
 } from './localstore'
-
-const AsyncStorage = {
-  getItem: function(key, defaultValue) {
-    const value = localStorage.getItem(key);
-    return (value !== null) ? JSON.parse(value).data : defaultValue;
-  },
-  setItem: function(key, value) {
-    localStorage.setItem(key, JSON.stringify({ data: value }));
-  },
-}
 
 export const fontSize = (payload) => {
   var size = (payload.width < payload.height) ? payload.width : payload.height;
@@ -72,7 +63,7 @@ export const loadInitialData = (params) => async (dispatch, getState) => {
   payload.category = {};
   payload.loading = false;
   await Promise.all(Object.keys(initialState).map(async (key) => {
-    payload[key] = await AsyncStorage.getItem(key, payload[key]);
+    payload[key] = await asyncStorage.getItem(key, payload[key]);
   }));
   dispatch({
     type: types.PARAMS,
@@ -92,7 +83,7 @@ export const changeLayout = (payload) => async (dispatch, getState) => {
 
 export const setParams = (payload, callback) => async (dispatch, getState) => {
   await Promise.all(Object.keys(payload).map(async (key) => {
-    await AsyncStorage.setItem(key, payload[key]);
+    await asyncStorage.setItem(key, payload[key]);
   }));
   dispatch({
     type: types.PARAMS,
